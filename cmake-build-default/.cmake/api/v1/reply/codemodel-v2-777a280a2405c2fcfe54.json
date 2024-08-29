@@ -2210,7 +2210,7 @@
 				{
 					"directoryIndex" : 16,
 					"id" : "__idf_esp_app_format::@08c2bdce7fd85cdbea06",
-					"jsonFile" : "target-__idf_esp_app_format-2e68ba286c8631d5a6ed.json",
+					"jsonFile" : "target-__idf_esp_app_format-0eec564ed89f5a73ecd7.json",
 					"name" : "__idf_esp_app_format",
 					"projectIndex" : 1
 				},
@@ -2567,7 +2567,7 @@
 				{
 					"directoryIndex" : 115,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-3f9e54017182b920e950.json",
+					"jsonFile" : "target-__idf_main-960a92644cc8a4dccaf2.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},

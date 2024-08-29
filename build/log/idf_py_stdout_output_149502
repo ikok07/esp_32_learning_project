@@ -1,0 +1,97 @@
+[1/13] Generating ../../index.html.S
+[2/13] Generating ../../app.js.S
+[3/13] Performing build step for 'bootloader'
+[1/1] cd /home/kok/CLionProjects/esp_course/build/bootloader/esp-idf/esptool_py && /home/kok/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/kok/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/kok/CLionProjects/esp_course/build/bootloader/bootloader.bin
+Bootloader binary size 0x6920 bytes. 0x6e0 bytes (6%) free.
+[4/13] No install step for 'bootloader'
+[5/13] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/index.html.S.obj
+[6/13] Building ASM object esp-idf/main/CMakeFiles/__idf_main.dir/__/__/app.js.S.obj
+[7/13] Completed 'bootloader'
+[8/13] Linking C static library esp-idf/main/libmain.a
+[9/13] Generating ld/sections.ld
+[10/13] Linking CXX executable esp_course.elf
+[11/13] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/kok/CLionProjects/esp_course/build/esp_course.bin
+[12/13] cd /home/kok/CLionProjects/esp_course/build/esp-idf/esptool_py && /home/kok/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/kok/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/kok/CLionProjects/esp_course/build/partition_table/partition-table.bin /home/kok/CLionProjects/esp_course/build/esp_course.bin
+esp_course.bin binary size 0x116110 bytes. Smallest app partition is 0x1f0000 bytes. 0xd9ef0 bytes (44%) free.
+[12/13] cd /home/kok/esp/esp-idf/components/esptool_py && /usr/local/lib/python3.10/dist-packages/cmake/data/bin/cmake -D IDF_PATH=/home/kok/esp/esp-idf -D "SERIAL_TOOL=/home/kok/.espressif/python_env/idf5.4_py3.10_env/bin/python;;/home/kok/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/kok/CLionProjects/esp_course/build -P /home/kok/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 esp_course.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.dev5
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:a1:74:78
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00126fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26912 bytes to 16553...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007835... (100 %)
+Wrote 26912 bytes (16553 compressed) at 0x00001000 in 0.6 seconds (effective 361.5 kbit/s)...
+Hash of data verified.
+Compressed 1138960 bytes to 599459...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d3ce... (5 %)
+Writing at 0x00029675... (8 %)
+Writing at 0x00036df6... (10 %)
+Writing at 0x0003fb70... (13 %)
+Writing at 0x0005df76... (16 %)
+Writing at 0x0006d902... (18 %)
+Writing at 0x00072886... (21 %)
+Writing at 0x0007ae91... (24 %)
+Writing at 0x000833dc... (27 %)
+Writing at 0x00088f76... (29 %)
+Writing at 0x0008ebd7... (32 %)
+Writing at 0x000945c0... (35 %)
+Writing at 0x00099e3b... (37 %)
+Writing at 0x0009fa7e... (40 %)
+Writing at 0x000a5708... (43 %)
+Writing at 0x000ab5c5... (45 %)
+Writing at 0x000b150e... (48 %)
+Writing at 0x000b6e70... (51 %)
+Writing at 0x000bcfad... (54 %)
+Writing at 0x000c2156... (56 %)
+Writing at 0x000c76fd... (59 %)
+Writing at 0x000ccf6a... (62 %)
+Writing at 0x000d2331... (64 %)
+Writing at 0x000d77c0... (67 %)
+Writing at 0x000dd142... (70 %)
+Writing at 0x000e2d2d... (72 %)
+Writing at 0x000e8770... (75 %)
+Writing at 0x000ee590... (78 %)
+Writing at 0x000f4987... (81 %)
+Writing at 0x000fa176... (83 %)
+Writing at 0x001040b7... (86 %)
+Writing at 0x0010ba88... (89 %)
+Writing at 0x001118c6... (91 %)
+Writing at 0x0011749d... (94 %)
+Writing at 0x0011d8db... (97 %)
+Writing at 0x00122ba4... (100 %)
+Wrote 1138960 bytes (599459 compressed) at 0x00010000 in 15.2 seconds (effective 600.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.0 seconds (effective 1115.9 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 1983.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

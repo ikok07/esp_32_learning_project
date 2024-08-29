@@ -17,8 +17,9 @@ dac_continuous_handle_t dac_handle = NULL;
  */
 static void dac_task(void *arg) {
     while (true) {
-        uint8_t data = pcnt_get_value();
+        uint8_t data = pcnt_get_value() / 2;
         ESP_ERROR_CHECK(dac_continuous_write_cyclically(dac_handle, &data, sizeof(data), NULL));
+        ESP_LOGI("dac", "%d", data);
         vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }

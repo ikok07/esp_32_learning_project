@@ -1,0 +1,179 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7112
+load:0x40078000,len:15788
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.4-dev-2306-gdbce23f8a4-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 28 2024 16:34:44[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (79) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (86) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (94) boot:  3 ota_0            OTA app          00 10 00010000 001f0000[0m
+[0;32mI (101) boot:  4 ota_1            OTA app          00 11 00200000 001f0000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=69bbch (433084) map[0m
+[0;32mI (270) esp_image: segment 1: paddr=00079be4 vaddr=3ffb0000 size=03f70h ( 16240) load[0m
+[0;32mI (276) esp_image: segment 2: paddr=0007db5c vaddr=40080000 size=024bch (  9404) load[0m
+[0;32mI (280) esp_image: segment 3: paddr=00080020 vaddr=400d0020 size=8ff0ch (589580) map[0m
+[0;32mI (486) esp_image: segment 4: paddr=0010ff34 vaddr=400824bc size=15444h ( 87108) load[0m
+[0;32mI (532) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (533) boot: Disabling RNG early entropy source...[0m
+[0;32mI (545) cpu_start: Multicore app[0m
+[0;32mI (553) cpu_start: Pro cpu start user code[0m
+[0;32mI (553) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (554) app_init: Application information:[0m
+[0;32mI (556) app_init: Project name:     esp_course[0m
+[0;32mI (561) app_init: App version:      77a50c3-dirty[0m
+[0;32mI (567) app_init: Compile time:     Aug 29 2024 11:07:46[0m
+[0;32mI (573) app_init: ELF file SHA256:  353f99e54...[0m
+[0;32mI (578) app_init: ESP-IDF:          v5.4-dev-2306-gdbce23f8a4-dirty[0m
+[0;32mI (585) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (590) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (595) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (600) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (607) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (613) heap_init: At 3FFB8290 len 00027D70 (159 KiB): DRAM[0m
+[0;32mI (619) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (625) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (632) heap_init: At 40097900 len 00008700 (33 KiB): IRAM[0m
+[0;32mI (640) spi_flash: detected chip: generic[0m
+[0;32mI (643) spi_flash: flash io: dio[0m
+[0;32mI (648) main_task: Started on CPU0[0m
+[0;32mI (658) main_task: Calling app_main()[0m
+[0;32mI (658) wifi_app: STARTING WIFI APPLICATION[0m
+[0;32mI (668) main_task: Returned from app_main()[0m
+Starting DHT taskReading dummy DHT
+Humidity: 0.0
+Temperature: 61.4
+[0;32mI (678) wifi_init: rx ba win: 6[0m
+[0;32mI (678) wifi_init: accept mbox: 6[0m
+[0;32mI (678) wifi_init: tcpip mbox: 32[0m
+[0;32mI (678) wifi_init: udp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp mbox: 6[0m
+[0;32mI (688) wifi_init: tcp tx win: 5760[0m
+[0;32mI (698) wifi_init: tcp rx win: 5760[0m
+[0;32mI (698) wifi_init: tcp mss: 1440[0m
+[0;32mI (698) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (708) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (968) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (1048) wifi_app: WIFI_EVENT_STA_START[0m
+[0;32mI (1048) wifi_app: WIFI_APP_MSG_START_HTTP_SERVER[0m
+[0;32mI (1048) http_server: http_server_configure: Starting server on port: 80 with task priority: 4[0m
+[0;32mI (1048) wifi_app: WIFI_EVENT_AP_START[0m
+[0;32mI (1058) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.0.1[0m
+[0;32mI (1068) http_server: http_server_configure: Registering URI handlers[0m
+Reading dummy DHT
+Humidity: 22.8
+Temperature: 77.1
+Reading dummy DHT
+Humidity: 15.6
+Temperature: 32.8
+Reading dummy DHT
+Humidity: 8.4
+Temperature: 48.5
+[0;32mI (14008) wifi_app: WIFI_EVENT_AP_STACONNECTED[0m
+[0;32mI (14138) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.0.2[0m
+Reading dummy DHT
+Humidity: 1.2
+Temperature: 64.2
+[0;32mI (17268) http_server: index.html requested[0m
+[0;32mI (17318) http_server: Jquery requested[0m
+[0;32mI (17508) http_server: app.css requested[0m
+[0;32mI (17508) http_server: app.css requested[0m
+[0;33mW (17528) httpd_uri: httpd_uri: URI '/installHook.js.map' not found[0m
+[0;33mW (17528) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (17638) http_server: OTAstatus requested[0m
+Reading dummy DHT
+Humidity: 24.0
+Temperature: 79.9
+[0;32mI (23268) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 16.8
+Temperature: 35.6
+[0;32mI (28318) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 9.6
+Temperature: 51.3
+Reading dummy DHT
+Humidity: 2.4
+Temperature: 67.0
+[0;32mI (32708) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 25.2
+Temperature: 22.7
+[0;32mI (38268) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 18.0
+Temperature: 38.4
+[0;32mI (43348) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 10.8
+Temperature: 54.1
+[0;32mI (47878) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 3.6
+Temperature: 69.8
+Reading dummy DHT
+Humidity: 26.4
+Temperature: 25.5
+[0;32mI (54108) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 19.2
+Temperature: 41.2
+[0;32mI (59238) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 12.0
+Temperature: 56.9
+[0;32mI (63818) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 4.8
+Temperature: 72.6
+Reading dummy DHT
+Humidity: 27.6
+Temperature: 28.3
+[0;32mI (69108) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 20.4
+Temperature: 44.0
+[0;32mI (74208) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 13.2
+Temperature: 59.7
+[0;32mI (79228) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 6.0
+Temperature: 75.4
+[0;32mI (84248) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 28.8
+Temperature: 31.1
+Reading dummy DHT
+Humidity: 21.6
+Temperature: 46.8
+[0;32mI (89268) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 14.4
+Temperature: 62.5
+[0;32mI (94298) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 7.2
+Temperature: 78.2
+[0;32mI (99938) http_server: DHT sensor data requested[0m
+Reading dummy DHT
+Humidity: 0.0
+Temperature: 33.9

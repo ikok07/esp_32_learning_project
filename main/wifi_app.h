@@ -7,6 +7,7 @@
 
 #include "portmacro.h"
 #include "esp_netif.h"
+#include "esp_wifi.h"
 
 // WiFi application settings
 #define WIFI_AP_SSID               "ESP32_AP"
@@ -36,7 +37,8 @@ extern esp_netif_t* esp_netif_ap;
 typedef enum {
     WIFI_APP_MSG_START_HTTP_SERVER = 0,
     WIFI_APP_MSG_CONNECTING_FROM_HTTP_SERVER,
-    WIFI_APP_MSG_STA_CONNECTED_GOT_IP
+    WIFI_APP_MSG_STA_CONNECTED_GOT_IP,
+  WIFI_APP_MSG_STA_DISCONNECTED
 } wifi_app_message_e;
 
 /*
@@ -55,10 +57,14 @@ typedef struct {
  */
 BaseType_t wifi_app_send_message(wifi_app_message_e msgID);
 
-/*
- *Starts the WiFi RTOS task
+/**
+ * Starts the WiFi RTOS task
  */
-
 void wifi_app_start(void);
+
+/**
+ * Gets the wifi configuration
+ */
+wifi_config_t *wifi_app_get_wifi_config(void);
 
 #endif //WIFI_APP_H

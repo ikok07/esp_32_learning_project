@@ -11,7 +11,7 @@
 #define ENC_B_GPIO 33
 
 #define PULSE_MIN_VAL -1
-#define PULSE_MAX_VAL 255
+#define PULSE_MAX_VAL 512
 
 extern bool pcnt_ready;
 extern pcnt_unit_handle_t pcnt_unit;

@@ -1,0 +1,400 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7112
+load:0x40078000,len:15788
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.4-dev-2306-gdbce23f8a4-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 28 2024 16:34:44[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (79) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (86) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (94) boot:  3 ota_0            OTA app          00 10 00010000 001f0000[0m
+[0;32mI (101) boot:  4 ota_1            OTA app          00 11 00200000 001f0000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bc5ch ( 48220) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=0001bc84 vaddr=3ffb0000 size=0246ch (  9324) load[0m
+[0;32mI (142) esp_image: segment 2: paddr=0001e0f8 vaddr=40080000 size=01f20h (  7968) load[0m
+[0;32mI (147) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19ef8h (106232) map[0m
+[0;32mI (189) esp_image: segment 4: paddr=00039f20 vaddr=40081f20 size=0bee8h ( 48872) load[0m
+[0;32mI (215) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (215) boot: Disabling RNG early entropy source...[0m
+[0;32mI (228) cpu_start: Multicore app[0m
+[0;32mI (236) cpu_start: Pro cpu start user code[0m
+[0;32mI (236) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (236) app_init: Application information:[0m
+[0;32mI (239) app_init: Project name:     esp_course[0m
+[0;32mI (244) app_init: App version:      1[0m
+[0;32mI (248) app_init: Compile time:     Aug 28 2024 16:34:38[0m
+[0;32mI (254) app_init: ELF file SHA256:  fa0b9e350...[0m
+[0;32mI (260) app_init: ESP-IDF:          v5.4-dev-2306-gdbce23f8a4-dirty[0m
+[0;32mI (267) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (271) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (276) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (281) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (289) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (294) heap_init: At 3FFB2DA0 len 0002D260 (180 KiB): DRAM[0m
+[0;32mI (301) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (307) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (314) heap_init: At 4008DE08 len 000121F8 (72 KiB): IRAM[0m
+[0;32mI (321) spi_flash: detected chip: generic[0m
+[0;32mI (324) spi_flash: flash io: dio[0m
+[0;32mI (329) main_task: Started on CPU0[0m
+[0;32mI (339) main_task: Calling app_main()[0m
+[0;32mI (349) pcnt: PCNT Unit initialized successfully![0m
+[0;32mI (349) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (349) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (359) pcnt: PCNT Channel initialized successfully![0m
+[0;32mI (359) pcnt: PCNT enabled successfully![0m
+[0;32mI (369) main_task: Returned from app_main()[0m
+[0;32mI (469) dac: 0[0m
+[0;32mI (579) dac: 0[0m
+[0;32mI (689) dac: 0[0m
+[0;32mI (799) dac: 0[0m
+[0;32mI (909) dac: 0[0m
+[0;32mI (1019) dac: 0[0m
+[0;32mI (1129) dac: 0[0m
+[0;32mI (1239) dac: 0[0m
+[0;32mI (1349) dac: 1[0m
+[0;32mI (1459) dac: 2[0m
+[0;32mI (1569) dac: 2[0m
+[0;32mI (1679) dac: 2[0m
+[0;32mI (1789) dac: 2[0m
+[0;32mI (1899) dac: 2[0m
+[0;32mI (2009) dac: 2[0m
+[0;32mI (2119) dac: 2[0m
+[0;32mI (2229) dac: 2[0m
+[0;32mI (2339) dac: 3[0m
+[0;32mI (2449) dac: 4[0m
+[0;32mI (2559) dac: 4[0m
+[0;32mI (2669) dac: 4[0m
+[0;32mI (2779) dac: 4[0m
+[0;32mI (2889) dac: 4[0m
+[0;32mI (2999) dac: 4[0m
+[0;32mI (3109) dac: 4[0m
+[0;32mI (3219) dac: 6[0m
+[0;32mI (3329) dac: 6[0m
+[0;32mI (3439) dac: 6[0m
+[0;32mI (3549) dac: 6[0m
+[0;32mI (3659) dac: 6[0m
+[0;32mI (3769) dac: 6[0m
+[0;32mI (3879) dac: 7[0m
+[0;32mI (3989) dac: 8[0m
+[0;32mI (4099) dac: 8[0m
+[0;32mI (4209) dac: 8[0m
+[0;32mI (4319) dac: 8[0m
+[0;32mI (4429) dac: 8[0m
+[0;32mI (4539) dac: 8[0m
+[0;32mI (4649) dac: 8[0m
+[0;32mI (4759) dac: 8[0m
+[0;32mI (4869) dac: 8[0m
+[0;32mI (4979) dac: 8[0m
+[0;32mI (5089) dac: 8[0m
+[0;32mI (5199) dac: 8[0m
+[0;32mI (5309) dac: 8[0m
+[0;32mI (5419) dac: 8[0m
+[0;32mI (5529) dac: 8[0m
+[0;32mI (5639) dac: 8[0m
+[0;32mI (5749) dac: 8[0m
+[0;32mI (5859) dac: 8[0m
+[0;32mI (5969) dac: 8[0m
+[0;32mI (6079) dac: 8[0m
+[0;32mI (6189) dac: 8[0m
+[0;32mI (6299) dac: 8[0m
+[0;32mI (6409) dac: 8[0m
+[0;32mI (6519) dac: 8[0m
+[0;32mI (6629) dac: 8[0m
+[0;32mI (6739) dac: 8[0m
+[0;32mI (6849) dac: 8[0m
+[0;32mI (6959) dac: 8[0m
+[0;32mI (7069) dac: 8[0m
+[0;32mI (7179) dac: 8[0m
+[0;32mI (7289) dac: 8[0m
+[0;32mI (7399) dac: 8[0m
+[0;32mI (7509) dac: 8[0m
+[0;32mI (7619) dac: 8[0m
+[0;32mI (7729) dac: 8[0m
+[0;32mI (7839) dac: 8[0m
+[0;32mI (7949) dac: 8[0m
+[0;32mI (8059) dac: 8[0m
+[0;32mI (8169) dac: 8[0m
+[0;32mI (8279) dac: 8[0m
+[0;32mI (8389) dac: 8[0m
+[0;32mI (8499) dac: 8[0m
+[0;32mI (8609) dac: 8[0m
+[0;32mI (8719) dac: 8[0m
+[0;32mI (8829) dac: 8[0m
+[0;32mI (8939) dac: 8[0m
+[0;32mI (9049) dac: 8[0m
+[0;32mI (9159) dac: 8[0m
+[0;32mI (9269) dac: 8[0m
+[0;32mI (9379) dac: 8[0m
+[0;32mI (9489) dac: 8[0m
+[0;32mI (9599) dac: 8[0m
+[0;32mI (9709) dac: 8[0m
+[0;32mI (9819) dac: 8[0m
+[0;32mI (9929) dac: 8[0m
+[0;32mI (10039) dac: 8[0m
+[0;32mI (10149) dac: 8[0m
+[0;32mI (10259) dac: 8[0m
+[0;32mI (10369) dac: 8[0m
+[0;32mI (10479) dac: 8[0m
+[0;32mI (10589) dac: 8[0m
+[0;32mI (10699) dac: 8[0m
+[0;32mI (10809) dac: 8[0m
+[0;32mI (10919) dac: 8[0m
+[0;32mI (11029) dac: 8[0m
+[0;32mI (11139) dac: 8[0m
+[0;32mI (11249) dac: 8[0m
+[0;32mI (11359) dac: 8[0m
+[0;32mI (11469) dac: 8[0m
+[0;32mI (11579) dac: 8[0m
+[0;32mI (11689) dac: 8[0m
+[0;32mI (11799) dac: 8[0m
+[0;32mI (11909) dac: 8[0m
+[0;32mI (12019) dac: 8[0m
+[0;32mI (12129) dac: 8[0m
+[0;32mI (12239) dac: 8[0m
+[0;32mI (12349) dac: 8[0m
+[0;32mI (12459) dac: 8[0m
+[0;32mI (12569) dac: 8[0m
+[0;32mI (12679) dac: 8[0m
+[0;32mI (12789) dac: 8[0m
+[0;32mI (12899) dac: 8[0m
+[0;32mI (13009) dac: 8[0m
+[0;32mI (13119) dac: 8[0m
+[0;32mI (13229) dac: 8[0m
+[0;32mI (13339) dac: 8[0m
+[0;32mI (13449) dac: 8[0m
+[0;32mI (13559) dac: 8[0m
+[0;32mI (13669) dac: 8[0m
+[0;32mI (13779) dac: 8[0m
+[0;32mI (13889) dac: 8[0m
+[0;32mI (13999) dac: 8[0m
+[0;32mI (14109) dac: 8[0m
+[0;32mI (14219) dac: 8[0m
+[0;32mI (14329) dac: 8[0m
+[0;32mI (14439) dac: 8[0m
+[0;32mI (14549) dac: 8[0m
+[0;32mI (14659) dac: 8[0m
+[0;32mI (14769) dac: 8[0m
+[0;32mI (14879) dac: 8[0m
+[0;32mI (14989) dac: 8[0m
+[0;32mI (15099) dac: 8[0m
+[0;32mI (15209) dac: 8[0m
+[0;32mI (15319) dac: 8[0m
+[0;32mI (15429) dac: 8[0m
+[0;32mI (15539) dac: 8[0m
+[0;32mI (15649) dac: 8[0m
+[0;32mI (15759) dac: 8[0m
+[0;32mI (15869) dac: 8[0m
+[0;32mI (15979) dac: 8[0m
+[0;32mI (16089) dac: 8[0m
+[0;32mI (16199) dac: 8[0m
+[0;32mI (16309) dac: 8[0m
+[0;32mI (16419) dac: 8[0m
+[0;32mI (16529) dac: 8[0m
+[0;32mI (16639) dac: 8[0m
+[0;32mI (16749) dac: 8[0m
+[0;32mI (16859) dac: 8[0m
+[0;32mI (16969) dac: 8[0m
+[0;32mI (17079) dac: 8[0m
+[0;32mI (17189) dac: 8[0m
+[0;32mI (17299) dac: 8[0m
+[0;32mI (17409) dac: 8[0m
+[0;32mI (17519) dac: 8[0m
+[0;32mI (17629) dac: 8[0m
+[0;32mI (17739) dac: 8[0m
+[0;32mI (17849) dac: 8[0m
+[0;32mI (17959) dac: 8[0m
+[0;32mI (18069) dac: 8[0m
+[0;32mI (18179) dac: 8[0m
+[0;32mI (18289) dac: 8[0m
+[0;32mI (18399) dac: 8[0m
+[0;32mI (18509) dac: 8[0m
+[0;32mI (18619) dac: 8[0m
+[0;32mI (18729) dac: 8[0m
+[0;32mI (18839) dac: 8[0m
+[0;32mI (18949) dac: 8[0m
+[0;32mI (19059) dac: 8[0m
+[0;32mI (19169) dac: 8[0m
+[0;32mI (19279) dac: 8[0m
+[0;32mI (19389) dac: 8[0m
+[0;32mI (19499) dac: 8[0m
+[0;32mI (19609) dac: 8[0m
+[0;32mI (19719) dac: 8[0m
+[0;32mI (19829) dac: 8[0m
+[0;32mI (19939) dac: 8[0m
+[0;32mI (20049) dac: 8[0m
+[0;32mI (20159) dac: 8[0m
+[0;32mI (20269) dac: 8[0m
+[0;32mI (20379) dac: 8[0m
+[0;32mI (20489) dac: 8[0m
+[0;32mI (20599) dac: 8[0m
+[0;32mI (20709) dac: 8[0m
+[0;32mI (20819) dac: 8[0m
+[0;32mI (20929) dac: 8[0m
+[0;32mI (21039) dac: 8[0m
+[0;32mI (21149) dac: 8[0m
+[0;32mI (21259) dac: 8[0m
+[0;32mI (21369) dac: 8[0m
+[0;32mI (21479) dac: 8[0m
+[0;32mI (21589) dac: 8[0m
+[0;32mI (21699) dac: 8[0m
+[0;32mI (21809) dac: 8[0m
+[0;32mI (21919) dac: 8[0m
+[0;32mI (22029) dac: 8[0m
+[0;32mI (22139) dac: 8[0m
+[0;32mI (22249) dac: 8[0m
+[0;32mI (22359) dac: 8[0m
+[0;32mI (22469) dac: 8[0m
+[0;32mI (22579) dac: 8[0m
+[0;32mI (22689) dac: 8[0m
+[0;32mI (22799) dac: 8[0m
+[0;32mI (22909) dac: 8[0m
+[0;32mI (23019) dac: 8[0m
+[0;32mI (23129) dac: 8[0m
+[0;32mI (23239) dac: 8[0m
+[0;32mI (23349) dac: 8[0m
+[0;32mI (23459) dac: 8[0m
+[0;32mI (23569) dac: 8[0m
+[0;32mI (23679) dac: 8[0m
+[0;32mI (23789) dac: 8[0m
+[0;32mI (23899) dac: 8[0m
+[0;32mI (24009) dac: 8[0m
+[0;32mI (24119) dac: 8[0m
+[0;32mI (24229) dac: 8[0m
+[0;32mI (24339) dac: 8[0m
+[0;32mI (24449) dac: 8[0m
+[0;32mI (24559) dac: 8[0m
+[0;32mI (24669) dac: 8[0m
+[0;32mI (24779) dac: 8[0m
+[0;32mI (24889) dac: 8[0m
+[0;32mI (24999) dac: 8[0m
+[0;32mI (25109) dac: 8[0m
+[0;32mI (25219) dac: 8[0m
+[0;32mI (25329) dac: 8[0m
+[0;32mI (25439) dac: 8[0m
+[0;32mI (25549) dac: 8[0m
+[0;32mI (25659) dac: 8[0m
+[0;32mI (25769) dac: 8[0m
+[0;32mI (25879) dac: 8[0m
+[0;32mI (25989) dac: 8[0m
+[0;32mI (26099) dac: 8[0m
+[0;32mI (26209) dac: 8[0m
+[0;32mI (26319) dac: 8[0m
+[0;32mI (26429) dac: 8[0m
+[0;32mI (26539) dac: 8[0m
+[0;32mI (26649) dac: 8[0m
+[0;32mI (26759) dac: 8[0m
+[0;32mI (26869) dac: 8[0m
+[0;32mI (26979) dac: 8[0m
+[0;32mI (27089) dac: 8[0m
+[0;32mI (27199) dac: 8[0m
+[0;32mI (27309) dac: 8[0m
+[0;32mI (27419) dac: 8[0m
+[0;32mI (27529) dac: 8[0m
+[0;32mI (27639) dac: 8[0m
+[0;32mI (27749) dac: 8[0m
+[0;32mI (27859) dac: 8[0m
+[0;32mI (27969) dac: 8[0m
+[0;32mI (28079) dac: 8[0m
+[0;32mI (28189) dac: 8[0m
+[0;32mI (28299) dac: 8[0m
+[0;32mI (28409) dac: 8[0m
+[0;32mI (28519) dac: 8[0m
+[0;32mI (28629) dac: 8[0m
+[0;32mI (28739) dac: 8[0m
+[0;32mI (28849) dac: 8[0m
+[0;32mI (28959) dac: 8[0m
+[0;32mI (29069) dac: 8[0m
+[0;32mI (29179) dac: 8[0m
+[0;32mI (29289) dac: 8[0m
+[0;32mI (29399) dac: 8[0m
+[0;32mI (29509) dac: 8[0m
+[0;32mI (29619) dac: 8[0m
+[0;32mI (29729) dac: 8[0m
+[0;32mI (29839) dac: 8[0m
+[0;32mI (29949) dac: 8[0m
+[0;32mI (30059) dac: 8[0m
+[0;32mI (30169) dac: 8[0m
+[0;32mI (30279) dac: 8[0m
+[0;32mI (30389) dac: 8[0m
+[0;32mI (30499) dac: 8[0m
+[0;32mI (30609) dac: 8[0m
+[0;32mI (30719) dac: 8[0m
+[0;32mI (30829) dac: 8[0m
+[0;32mI (30939) dac: 8[0m
+[0;32mI (31049) dac: 8[0m
+[0;32mI (31159) dac: 8[0m
+[0;32mI (31269) dac: 8[0m
+[0;32mI (31379) dac: 8[0m
+[0;32mI (31489) dac: 8[0m
+[0;32mI (31599) dac: 8[0m
+[0;32mI (31709) dac: 8[0m
+[0;32mI (31819) dac: 8[0m
+[0;32mI (31929) dac: 8[0m
+[0;32mI (32039) dac: 8[0m
+[0;32mI (32149) dac: 8[0m
+[0;32mI (32259) dac: 8[0m
+[0;32mI (32369) dac: 8[0m
+[0;32mI (32479) dac: 8[0m
+[0;32mI (32589) dac: 8[0m
+[0;32mI (32699) dac: 8[0m
+[0;32mI (32809) dac: 8[0m
+[0;32mI (32919) dac: 8[0m
+[0;32mI (33029) dac: 8[0m
+[0;32mI (33139) dac: 8[0m
+[0;32mI (33249) dac: 8[0m
+[0;32mI (33359) dac: 8[0m
+[0;32mI (33469) dac: 8[0m
+[0;32mI (33579) dac: 8[0m
+[0;32mI (33689) dac: 8[0m
+[0;32mI (33799) dac: 8[0m
+[0;32mI (33909) dac: 8[0m
+[0;32mI (34019) dac: 8[0m
+[0;32mI (34129) dac: 8[0m
+[0;32mI (34239) dac: 8[0m
+[0;32mI (34349) dac: 8[0m
+[0;32mI (34459) dac: 8[0m
+[0;32mI (34569) dac: 8[0m
+[0;32mI (34679) dac: 8[0m
+[0;32mI (34789) dac: 8[0m
+[0;32mI (34899) dac: 8[0m
+[0;32mI (35009) dac: 8[0m
+[0;32mI (35119) dac: 8[0m
+[0;32mI (35229) dac: 8[0m
+[0;32mI (35339) dac: 8[0m
+[0;32mI (35449) dac: 8[0m
+[0;32mI (35559) dac: 8[0m
+[0;32mI (35669) dac: 8[0m
+[0;32mI (35779) dac: 8[0m
+[0;32mI (35889) dac: 8[0m
+[0;32mI (35999) dac: 8[0m
+[0;32mI (36109) dac: 8[0m
+[0;32mI (36219) dac: 8[0m
+[0;32mI (36329) dac: 8[0m
+[0;32mI (36439) dac: 8[0m
+[0;32mI (36549) dac: 8[0m
+[0;32mI (36659) dac: 8[0m
+[0;32mI (36769) dac: 8[0m
+[0;32mI (36879) dac: 8[0m
+[0;32mI (36989) dac: 8[0m
+[0;32mI (37099) dac: 8[0m
+[0;32mI (37209) dac: 8[0m
+[0;32mI (37319) dac: 8[0m
+[0;32mI (37429) dac: 8[0m
