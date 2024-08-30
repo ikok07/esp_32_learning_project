@@ -25,4 +25,9 @@
 #define DHT22_TASK_PRIORITY                 5
 #define DHT22_TASK_CORE_ID                  1
 
+// WiFi Reset button task
+#define WIFI_RESET_BUTTON_TASK_STACK_SIZE   2048
+#define WIFI_RESET_BUTTON_TASK_PRIORITY     6
+#define WIFI_RESET_BUTTON_TASK_CORE_ID      0
+
 #endif //TASKS_COMMON_H

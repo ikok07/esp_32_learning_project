@@ -1,9 +1,0 @@
-[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
-[0;33m0x40080400: _init at ??:?
-[0m
-[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 9c1a5fc40d2b893ca5f107fb57e4c79d8c34799950d4a8b45487265b379ae849[0m
-[0;33m0x40080400: _init at ??:?
-[0m
-[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 9c1a5fc40d2b893ca5f107fb57e4c79d8c34799950d4a8b45487265b379ae849[0m
-[0m

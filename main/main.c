@@ -10,6 +10,7 @@
 #include "nvs_flash.h"
 
 #include "wifi_app.h"
+#include "wifi_reset_button.h"
 #include "dht_22/DHT22.h"
 
 int pcnt_last_val = 0;
@@ -25,6 +26,9 @@ void app_main(void) {
 
     // Start WiFi
     wifi_app_start();
+
+    // Configure the WiFi reset button
+    wifi_reset_button_config();
 
     // Start DHT22 task
     DHT22_task_start();

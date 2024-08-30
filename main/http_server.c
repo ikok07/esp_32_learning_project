@@ -96,6 +96,10 @@ static void http_server_monitor(void *pvParameter) {
                     ESP_LOGI(TAG, "HTTP_MSG_WIFI_CONNECT_FAIL");
                     g_wifi_connect_status = HTTP_WIFI_STATUS_CONNECT_FAILED;
                     break;
+                case HTTP_MSG_WIFI_USER_DISCONNECT:
+                    ESP_LOGI(TAG, "HTTP_MSG_USER_DISCONNECT");
+                    g_wifi_connect_status = HTTP_WIFI_STATUS_DISCONNECTED;
+                    break;
                 case HTTP_MSG_OTA_UPDATE_SUCCESSFULL:
                     ESP_LOGI(TAG, "HTTP_MSG_OTA_UPDATE_SUCCESSFULL");
                     g_fw_update_status = OTA_UPDATE_SUCCESSFULL;
@@ -361,6 +365,48 @@ static esp_err_t http_server_wifi_connect_status_json_handler(httpd_req_t *req) 
 }
 
 /**
+ * wifiConnectInfo handler updates the connection status for the web page.
+ * @param req HTTP request for which the uri needs to be handled
+ * @return ESP_OK
+ */
+static esp_err_t http_server_get_wifi_connect_info_json_handler(httpd_req_t *req) {
+    char responseJSON[200];
+
+    char ip[IP4ADDR_STRLEN_MAX];
+    char netmask[IP4ADDR_STRLEN_MAX];
+    char gw[IP4ADDR_STRLEN_MAX];
+
+    if (g_wifi_connect_status == HTTP_WIFI_STATUS_CONNECT_SUCCESS) {
+        wifi_ap_record_t wifi_data;
+        ESP_ERROR_CHECK(esp_wifi_sta_get_ap_info(&wifi_data));
+        char *ssid = (char*)wifi_data.ssid;
+
+        esp_netif_ip_info_t ip_info;
+        ESP_ERROR_CHECK(esp_netif_get_ip_info(esp_netif_sta, &ip_info));
+        esp_ip4addr_ntoa(&ip_info.ip, ip, IP4ADDR_STRLEN_MAX);
+        esp_ip4addr_ntoa(&ip_info.netmask, netmask, IP4ADDR_STRLEN_MAX);
+        esp_ip4addr_ntoa(&ip_info.gw, gw, IP4ADDR_STRLEN_MAX);
+        sprintf(responseJSON, "{\"ap\": \"%s\", \"ip\": \"%s\", \"netmask\": \"%s\", \"gw\": \"%s\"}", ssid, ip, netmask, gw);
+    }
+
+    httpd_resp_set_type(req, "application/json");
+    httpd_resp_send(req, responseJSON, strlen(responseJSON));
+
+    return ESP_OK;
+}
+
+/**
+ * wifiDisconnect handler updates the connection status for the web page.
+ * @param req HTTP request for which the uri needs to be handled
+ * @return ESP_OK
+ */
+static esp_err_t http_server_get_wifi_disconnect_json_handler(httpd_req_t *req) {
+    ESP_LOGI(TAG, "wifiDisconnect.json requested");
+    wifi_app_send_message(WIFI_APP_MSG_USER_REQUEST_STA_DISCONNECT);
+    return ESP_OK;
+}
+
+/**
  * Sets up the default httpd server configuration
  * @return http server instance handle if successful, NULL otherwise
  */
@@ -494,6 +540,24 @@ static httpd_handle_t http_server_configure(void) {
             .user_ctx = NULL,
         };
         httpd_register_uri_handler(http_server_handle, &wifi_connect_status_json);
+
+        // register wifiConnectInfo.json handler
+        httpd_uri_t wifi_connect_info_json = {
+            .uri = "/wifiConnectInfo.json",
+            .method = HTTP_GET,
+            .handler = http_server_get_wifi_connect_info_json_handler,
+            .user_ctx = NULL,
+        };
+        httpd_register_uri_handler(http_server_handle, &wifi_connect_info_json);
+
+        // register wifiDisconnect.json handler
+        httpd_uri_t wifi_disconnect_json = {
+            .uri = "/wifiDisconnect.json",
+            .method = HTTP_DELETE,
+            .handler = http_server_get_wifi_disconnect_json_handler,
+            .user_ctx = NULL,
+        };
+        httpd_register_uri_handler(http_server_handle, &wifi_disconnect_json);
 
 
         return http_server_handle;

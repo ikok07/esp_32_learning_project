@@ -11,10 +11,10 @@ var wifiConnectInterval = null;
 $(document).ready(function(){
 	getUpdateStatus();
     startDHTSensorInterval();
-    $("#connect_wifi").on("click", function () {
-        checkCredentials();
-    })
-});   
+    getConnectInfo();
+    $("#connect_wifi").on("click", checkCredentials);
+    $("#disconnect_wifi").on("click", disconnectWifi);
+});
 
 /**
  * Gets file name and size for display on the web page.
@@ -166,6 +166,7 @@ function getWifiConenctStatus() {
         } else if (response.wifi_connect_status === 3) {
             document.getElementById("wifi_connect_status").innerHTML = "<h4 class='gr'>Connection successful!</h4>";
             stopWifiConnectStatusInterval();
+            getConnectInfo();
         }
     }
 }
@@ -230,4 +231,40 @@ function showPassword() {
     const pwd = document.getElementById("connect_pass");
     if (pwd.type === "password") pwd.type = "text";
     else pwd.type = "password";
+}
+
+/**
+ * Gets the connection information for displaying on the web page
+ */
+function getConnectInfo() {
+    $.getJSON("/wifiConnectInfo.json", (data) => {
+        $("#connected_ap_label").html("Connected to: ")
+        $("#connected_ap").text(data["ap"])
+
+        $("#ip_address_label").html("IP Address: ")
+        $("#wifi_connect_ip").text(data["ip"])
+
+        $("#netmask_label").html("Netmask: ")
+        $("#wifi_connect_netmask").text(data["netmask"])
+
+        $("#gateway_label").html("Geteway: ")
+        $("#wifi_connect_gateway").text(data["gw"])
+
+        document.getElementById("disconnect_wifi").style.display = "block";
+    });
+}
+
+/**
+ * Disconnect the ESP32 from the current AP
+ */
+function disconnectWifi() {
+    $.ajax({
+        url: "/wifiDisconnect.json",
+        dataType: "json",
+        method: "DELETE",
+        cache: false,
+        data: {"timestamp": Date.now()},
+    });
+
+    setTimeout("location.reload(true)", 2000);
 }

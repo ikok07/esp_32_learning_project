@@ -1,0 +1,187 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7112
+load:0x40078000,len:15788
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.4-dev-2306-gdbce23f8a4-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Aug 30 2024 14:29:15[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (79) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (86) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (94) boot:  3 ota_0            OTA app          00 10 00010000 001f0000[0m
+[0;32mI (101) boot:  4 ota_1            OTA app          00 11 00200000 001f0000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=6be1ch (441884) map[0m
+[0;32mI (273) esp_image: segment 1: paddr=0007be44 vaddr=3ffb0000 size=03f70h ( 16240) load[0m
+[0;32mI (279) esp_image: segment 2: paddr=0007fdbc vaddr=40080000 size=0025ch (   604) load[0m
+[0;32mI (280) esp_image: segment 3: paddr=00080020 vaddr=400d0020 size=9151ch (595228) map[0m
+[0;32mI (491) esp_image: segment 4: paddr=00111544 vaddr=4008025c size=1785ch ( 96348) load[0m
+[0;32mI (541) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (541) boot: Disabling RNG early entropy source...[0m
+[0;32mI (554) cpu_start: Multicore app[0m
+[0;32mI (562) cpu_start: Pro cpu start user code[0m
+[0;32mI (562) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (562) app_init: Application information:[0m
+[0;32mI (565) app_init: Project name:     esp_course[0m
+[0;32mI (570) app_init: App version:      ba8698f-dirty[0m
+[0;32mI (575) app_init: Compile time:     Aug 30 2024 14:29:09[0m
+[0;32mI (581) app_init: ELF file SHA256:  72a191506...[0m
+[0;32mI (587) app_init: ESP-IDF:          v5.4-dev-2306-gdbce23f8a4-dirty[0m
+[0;32mI (594) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (598) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (603) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (608) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (616) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (621) heap_init: At 3FFB82A0 len 00027D60 (159 KiB): DRAM[0m
+[0;32mI (628) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (634) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (640) heap_init: At 40097AB8 len 00008548 (33 KiB): IRAM[0m
+[0;32mI (648) spi_flash: detected chip: generic[0m
+[0;32mI (651) spi_flash: flash io: dio[0m
+[0;32mI (656) main_task: Started on CPU0[0m
+[0;32mI (666) main_task: Calling app_main()[0m
+[0;32mI (676) wifi_app: STARTING WIFI APPLICATION[0m
+Starting DHT task[0;32mI (676) main_task: Returned from app_main()[0m
+[0;32mI (686) wifi_init: rx ba win: 6[0m
+[0;32mI (686) wifi_init: accept mbox: 6[0m
+[0;32mI (686) wifi_init: tcpip mbox: 32[0m
+[0;32mI (686) wifi_init: udp mbox: 6[0m
+[0;32mI (696) wifi_init: tcp mbox: 6[0m
+[0;32mI (696) wifi_init: tcp tx win: 5760[0m
+[0;32mI (706) wifi_init: tcp rx win: 5760[0m
+[0;32mI (706) wifi_init: tcp mss: 1440[0m
+[0;32mI (706) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (716) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (976) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;32mI (1056) wifi_app: WIFI_EVENT_STA_START[0m
+[0;32mI (1056) wifi_app: WIFI_APP_MSG_LOAD_SAVED_CREDENTIALS[0m
+[0;32mI (1056) nvs: app_nvs_load_sta_creds: Loading WiFi credentials from flash[0m
+[0;32mI (1056) wifi_app: WIFI_EVENT_AP_START[0m
+app_nvs_load_sta_creds: Error (ESP_ERR_NVS_NOT_FOUND) no station SSID found in NVS
+[0;32mI (1066) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.0.1[0m
+[0;32mI (1076) wifi_app: Unable to load station configuration[0m
+[0;32mI (1086) wifi_app: WIFI_APP_MSG_START_HTTP_SERVER[0m
+[0;32mI (1096) http_server: http_server_configure: Starting server on port: 80 with task priority: 4[0m
+[0;32mI (1106) http_server: http_server_configure: Registering URI handlers[0m
+[0;32mI (1346) wifi_app: WIFI_EVENT_AP_STACONNECTED[0m
+[0;32mI (1466) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.0.2[0m
+[0;32mI (3056) wifi_app: WIFI_EVENT_AP_STADISCONNECTED[0m
+[0;32mI (4216) wifi_app: WIFI_EVENT_AP_STACONNECTED[0m
+[0;32mI (4336) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.0.2[0m
+[0;32mI (4596) wifi_app: WIFI_EVENT_AP_STADISCONNECTED[0m
+[0;32mI (5756) wifi_app: WIFI_EVENT_AP_STACONNECTED[0m
+[0;32mI (5866) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.0.2[0m
+[0;32mI (6076) http_server: DHT sensor data requested[0m
+[0;32mI (7136) http_server: DHT sensor data requested[0m
+[0;32mI (7146) http_server: DHT sensor data requested[0m
+[0;32mI (7336) http_server: DHT sensor data requested[0m
+[0;32mI (7386) http_server: DHT sensor data requested[0m
+[0;32mI (7436) http_server: DHT sensor data requested[0m
+[0;32mI (7496) http_server: DHT sensor data requested[0m
+[0;32mI (7546) http_server: DHT sensor data requested[0m
+[0;32mI (7596) http_server: DHT sensor data requested[0m
+[0;32mI (7646) http_server: DHT sensor data requested[0m
+[0;32mI (7696) http_server: DHT sensor data requested[0m
+[0;32mI (7746) http_server: DHT sensor data requested[0m
+[0;32mI (7796) http_server: DHT sensor data requested[0m
+[0;32mI (7856) http_server: DHT sensor data requested[0m
+[0;32mI (7906) http_server: DHT sensor data requested[0m
+[0;32mI (7956) http_server: DHT sensor data requested[0m
+[0;32mI (7976) http_server: DHT sensor data requested[0m
+[0;32mI (8026) http_server: index.html requested[0m
+[0;32mI (8076) http_server: Jquery requested[0m
+[0;32mI (8216) http_server: app.css requested[0m
+[0;32mI (8236) http_server: app.css requested[0m
+[0;32mI (8326) http_server: OTAstatus requested[0m
+[0;32mI (13376) http_server: DHT sensor data requested[0m
+[0;32mI (18636) http_server: DHT sensor data requested[0m
+[0;32mI (18646) http_server: /wifiConnect.json requested[0m
+[0;32mI (18646) http_server: http_server_wifi_connect_json_handler: Found header => my-connect-ssid: iPhone 4s[0m
+[0;32mI (18646) http_server: http_server_wifi_connect_json_handler: Found header => my-connect-pwd: Glass1461[0m
+[0;32mI (18656) wifi_app: WIFI_APP_MSG_START_HTTP_SERVER[0m
+[0;32mI (18666) http_server: HTTP_MSG_WIFI_CONNECT_INIT[0m
+[0;32mI (21836) wifi_app: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (23836) wifi_app: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (23836) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (23836) wifi_app: WIFI_APP_MSG_STA_CONNECTED_GOT_IP[0m
+[0;32mI (23846) nvs: app_nvs_save_sta_creds: Saving station mode credentials to flash[0m
+[0;32mI (23856) nvs: app_nvs_save_sta_creds: wrote wifi_sta_config: Station SSID: iPhone 4s Password: Glass1461[0m
+[0;32mI (23856) http_server: HTTP_MSG_WIFI_CONNECT_SUCCESS[0m
+[0;32mI (27456) http_server: /wifiConnectStatus requested[0m
+[0;32mI (27486) http_server: DHT sensor data requested[0m
+[0;32mI (32786) http_server: DHT sensor data requested[0m
+[0;32mI (38746) http_server: DHT sensor data requested[0m
+[0;32mI (43186) http_server: DHT sensor data requested[0m
+[0;32mI (48646) http_server: DHT sensor data requested[0m
+[0;32mI (53746) http_server: DHT sensor data requested[0m
+[0;32mI (58306) http_server: DHT sensor data requested[0m
+[0;32mI (63626) http_server: DHT sensor data requested[0m
+[0;32mI (68746) http_server: DHT sensor data requested[0m
+[0;32mI (73326) http_server: DHT sensor data requested[0m
+[0;32mI (78626) http_server: DHT sensor data requested[0m
+[0;32mI (83736) http_server: DHT sensor data requested[0m
+[0;32mI (88446) http_server: DHT sensor data requested[0m
+[0;32mI (93636) http_server: DHT sensor data requested[0m
+[0;32mI (98746) http_server: DHT sensor data requested[0m
+[0;32mI (103756) http_server: DHT sensor data requested[0m
+[0;32mI (108776) http_server: DHT sensor data requested[0m
+[0;32mI (113796) http_server: DHT sensor data requested[0m
+[0;32mI (118816) http_server: DHT sensor data requested[0m
+[0;32mI (124466) http_server: DHT sensor data requested[0m
+[0;32mI (128836) http_server: DHT sensor data requested[0m
+[0;32mI (133846) http_server: DHT sensor data requested[0m
+[0;32mI (139476) http_server: DHT sensor data requested[0m
+[0;32mI (143876) http_server: DHT sensor data requested[0m
+[0;32mI (149416) http_server: DHT sensor data requested[0m
+[0;32mI (154466) http_server: DHT sensor data requested[0m
+[0;32mI (158896) http_server: DHT sensor data requested[0m
+[0;32mI (164406) http_server: DHT sensor data requested[0m
+[0;32mI (169486) http_server: DHT sensor data requested[0m
+[0;32mI (173916) http_server: DHT sensor data requested[0m
+[0;32mI (179416) http_server: DHT sensor data requested[0m
+[0;32mI (184476) http_server: DHT sensor data requested[0m
+[0;32mI (189756) http_server: DHT sensor data requested[0m
+[0;32mI (190746) http_server: index.html requested[0m
+[0;32mI (190796) http_server: Jquery requested[0m
+[0;32mI (190976) http_server: app.css requested[0m
+[0;32mI (190996) http_server: app.css requested[0m
+[0;32mI (191026) http_server: OTAstatus requested[0m
+[0;32mI (196936) http_server: DHT sensor data requested[0m
+[0;32mI (199456) wifi_reset_button: WIFI RESET BUTTON INTERRUPT OCCURRED[0m
+[0;32mI (199456) wifi_app: WIFI_APP_MSG_USER_REQUEST_STA_DISCONNECT[0m
+[0;32mI (199466) wifi_app: WIFI_EVENT_STA_DISCONNECTED[0m
+WIFI_EVENT_STA_DISCONNECTED, reason code 8
+[0;32mI (199466) nvs: app_nvs_clear_sta_creds: Clearing WiFi station mode credentials from flash[0m
+[0;32mI (199486) wifi_app: WIFI_APP_MSG_STA_DISCONNECTED[0m
+[0;32mI (199486) wifi_app: WIFI_APP_MSG_STA_DISCONNECTED: USER REQUESTED DISCONNECTION[0m
+[0;32mI (199496) http_server: HTTP_MSG_USER_DISCONNECT[0m
+[0;32mI (202006) http_server: DHT sensor data requested[0m
+[0;32mI (205556) http_server: index.html requested[0m
+[0;32mI (205616) http_server: Jquery requested[0m
+[0;32mI (205766) http_server: app.css requested[0m
+[0;32mI (205786) http_server: app.css requested[0m
+[0;32mI (205896) http_server: OTAstatus requested[0m
+[0;32mI (211956) http_server: DHT sensor data requested[0m
+[0;32mI (213656) wifi_reset_button: WIFI RESET BUTTON INTERRUPT OCCURRED[0m
+[0;32mI (213656) wifi_app: WIFI_APP_MSG_USER_REQUEST_STA_DISCONNECT[0m
+[0;32mI (217026) http_server: DHT sensor data requested[0m
+[0;32mI (221566) http_server: DHT sensor data requested[0m
+[0;32mI (225346) wifi_reset_button: WIFI RESET BUTTON INTERRUPT OCCURRED[0m
+[0;32mI (225346) wifi_app: WIFI_APP_MSG_USER_REQUEST_STA_DISCONNECT[0m
+[0;32mI (226936) http_server: DHT sensor data requested[0m
+[0;32mI (231996) http_server: DHT sensor data requested[0m
